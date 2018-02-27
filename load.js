@@ -1,8 +1,13 @@
-var body = document.getElementsByTagName('BODY')[0];
-var script = document.createElement('script');
+let body = document.getElementsByTagName('BODY')[0];
+let script = document.createElement('script');
 script.type = 'text/javascript';
-script.src = './bundle.js';
+script.src = document.currentScript.getAttribute('bundle');
 
-if (script.readyState = 4) {
-	console.log("Loaded");
+script.onloadstart() = function() {
+	console.log("loading");
 }
+
+script.onload() = function() {
+	console.log("loaded");
+	body.appendChild(script);
+};
