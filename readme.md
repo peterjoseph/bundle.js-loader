@@ -7,5 +7,5 @@ Installation
 2. Place the following script in the `<BODY>` of the index file where the `bundle.js` file is loaded.
 
 ```
-<script src="./load.js" bundle="./bundle.js"></script>
+<script src="./loader.js" bundle="./bundle.js" spinner="./spinner.gif"></script>
 ```
