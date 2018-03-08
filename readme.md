@@ -7,7 +7,7 @@ Bundle.js Loader is a script that fetches the file, and displays a loading spinn
 Installation
 -----
 
-1. Add the loader.js (or load.min) file to the root directory of your project.
+1. Add the loader.js (or loader.min.js) file to the root directory of your project.
 2. Include your loading spinner gif in the same directory.
 3. Place the following script in the `<BODY>` of the index.html file where the `bundle.js` file is loaded.
 
