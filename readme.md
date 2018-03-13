@@ -12,5 +12,5 @@ Installation
 3. Place the following script in the `<BODY>` of the index.html file where the `bundle.js` file is loaded.
 
 ```
-<script src="./loader.min.js" bundle="./bundle.js" spinner="./spinner.gif"></script>
+<script src="./loader.min.js" bundle="./bundle.js" spinner="./spinner.gif entry="app"></script>
 ```

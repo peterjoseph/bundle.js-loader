@@ -18,7 +18,7 @@ xhr.open(method, url, true);
 xhr.onload = function () {
   if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
 	script.src = URL.createObjectURL(xhr.response);
-	body.innerHTML = "";
+	body.innerHTML = document.currentScript && document.currentScript.getAttribute('entry') ? `<div id="${document.currentScript.getAttribute('entry')}"></div>` : "";
 	body.appendChild(script);
   }
 };
