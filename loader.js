@@ -4,6 +4,7 @@ let script = document.createElement('script');
 script.type = 'text/javascript';
 
 // Push loading spinner to screen
+const entryDiv = document.currentScript.getAttribute('entry');
 body.innerHTML +=
 	'<div style="position:absolute; z-index:100; top:50%; left: 50%; transform: translate(-50%, -50%);">' + 
 		'<img src="' + document.currentScript.getAttribute('spinner') + '" alt="Loading">' + 
@@ -18,7 +19,7 @@ xhr.open(method, url, true);
 xhr.onload = function () {
   if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
 	script.src = URL.createObjectURL(xhr.response);
-	body.innerHTML = document.currentScript && document.currentScript.getAttribute('entry') ? `<div id="${document.currentScript.getAttribute('entry')}"></div>` : "";
+	body.innerHTML = (entryDiv ? `<div id="${entryDiv}"></div>` : "");
 	body.appendChild(script);
   }
 };
